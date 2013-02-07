@@ -11,3 +11,6 @@ My Windows SDK! Store some opensource library and document
 
 # FreeImage
 [http://freeimage.sourceforge.net/](http://freeimage.sourceforge.net/)
+
+# tinyxml
+[http://sourceforge.net/projects/tinyxml/](http://sourceforge.net/projects/tinyxml/)
