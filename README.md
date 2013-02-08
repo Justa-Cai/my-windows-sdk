@@ -14,3 +14,6 @@ My Windows SDK! Store some opensource library and document
 
 # tinyxml
 [http://sourceforge.net/projects/tinyxml/](http://sourceforge.net/projects/tinyxml/)
+
+# tidy-html5
+[https://github.com/w3c/tidy-html5](https://github.com/w3c/tidy-html5)
