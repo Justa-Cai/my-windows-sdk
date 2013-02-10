@@ -17,3 +17,6 @@ My Windows SDK! Store some opensource library and document
 
 # tidy-html5
 [https://github.com/w3c/tidy-html5](https://github.com/w3c/tidy-html5)
+
+# vld-1.0
+[http://www.codeproject.com/Articles/9815/Visual-Leak-Detector-Enhanced-Memory-Leak-Detectio](http://www.codeproject.com/Articles/9815/Visual-Leak-Detector-Enhanced-Memory-Leak-Detectio)
