@@ -1,0 +1,316 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resourceppc.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resourceppc.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\CnCommTestppc.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""afxres.rc""     // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\CnCommTest.ico"
+IDI_OFF                 ICON                    "res\\LedOn.ico"
+IDI_ON                  ICON                    "res\\LedOff.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CNCOMMTEST_DIALOG DIALOG  0, 0, 155, 163
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_APPWINDOW | 0x80000000L
+CAPTION "CnCommTest"
+FONT 9, "MS Shell Dlg"
+BEGIN
+    EDITTEXT        IDC_EDIT_RX,7,7,141,78,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL
+    EDITTEXT        IDC_EDIT_TX,7,91,141,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Send",IDC_BUTTON_SEND,106,108,42,14
+    PUSHBUTTON      "Clear",IDC_BUTTON_CLEAR,106,124,42,14
+    CONTROL         "Hex",IDC_CHECK_HEX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,59,142,28,10
+    COMBOBOX        IDC_COMBO_PORT,7,141,48,30,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_BAUDRATE,7,109,48,45,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_PARITY,57,109,48,30,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_BYTESIZE,7,125,48,30,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_STOPBITS,57,125,48,30,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Open",IDC_BUTTON_OPEN,106,140,42,14
+    LTEXT           "L",IDC_STATIC_LAMP,87,143,10,8
+END
+
+IDD_CNCOMMTEST_DIALOG_WIDE DIALOG  0, 0, 210, 129
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_APPWINDOW | 0x80000000L
+CAPTION "CnCommTest"
+FONT 9, "MS Shell Dlg"
+BEGIN
+    EDITTEXT        IDC_EDIT_RX,7,7,196,78,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_VSCROLL | WS_HSCROLL
+    EDITTEXT        IDC_EDIT_TX,7,91,196,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Send",IDC_BUTTON_SEND,7,108,50,14
+    PUSHBUTTON      "Clear",IDC_BUTTON_CLEAR,61,108,50,14
+    CONTROL         "Hex",IDC_CHECK_HEX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,122,110,28,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "CnCommTest.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "CnCommTest.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_CNCOMMTEST_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 148
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_CNCOMMTEST_DIALOG_WIDE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_CNCOMMTEST_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO_PORT, 0x403, 5, 0
+0x4f43, 0x314d, "\000" 
+    IDC_COMBO_PORT, 0x403, 5, 0
+0x4f43, 0x324d, "\000" 
+    IDC_COMBO_PORT, 0x403, 5, 0
+0x4f43, 0x334d, "\000" 
+    IDC_COMBO_PORT, 0x403, 5, 0
+0x4f43, 0x344d, "\000" 
+    IDC_COMBO_PORT, 0x403, 5, 0
+0x4f43, 0x354d, "\000" 
+    IDC_COMBO_PORT, 0x403, 5, 0
+0x4f43, 0x364d, "\000" 
+    IDC_COMBO_PORT, 0x403, 5, 0
+0x4f43, 0x374d, "\000" 
+    IDC_COMBO_PORT, 0x403, 5, 0
+0x4f43, 0x384d, "\000" 
+    IDC_COMBO_PORT, 0x403, 5, 0
+0x4f43, 0x394d, "\000" 
+    IDC_COMBO_PORT, 0x403, 6, 0
+0x4f43, 0x314d, 0x0030, 
+    IDC_COMBO_PORT, 0x403, 6, 0
+0x4f43, 0x314d, 0x0031, 
+    IDC_COMBO_PORT, 0x403, 6, 0
+0x4f43, 0x314d, 0x0032, 
+    IDC_COMBO_PORT, 0x403, 6, 0
+0x4f43, 0x314d, 0x0033, 
+    IDC_COMBO_PORT, 0x403, 6, 0
+0x4f43, 0x314d, 0x0034, 
+    IDC_COMBO_PORT, 0x403, 6, 0
+0x4f43, 0x314d, 0x0035, 
+    IDC_COMBO_PORT, 0x403, 6, 0
+0x4f43, 0x314d, 0x0036, 
+    IDC_COMBO_PORT, 0x403, 6, 0
+0x4f43, 0x314d, 0x0037, 
+    IDC_COMBO_PORT, 0x403, 6, 0
+0x4f43, 0x314d, 0x0038, 
+    IDC_COMBO_PORT, 0x403, 6, 0
+0x4f43, 0x314d, 0x0039, 
+    IDC_COMBO_PORT, 0x403, 6, 0
+0x4f43, 0x324d, 0x0030, 
+    IDC_COMBO_PORT, 0x403, 6, 0
+0x4f43, 0x324d, 0x0031, 
+    IDC_COMBO_PORT, 0x403, 6, 0
+0x4f43, 0x324d, 0x0032, 
+    IDC_COMBO_PORT, 0x403, 6, 0
+0x4f43, 0x324d, 0x0033, 
+    IDC_COMBO_PORT, 0x403, 6, 0
+0x4f43, 0x324d, 0x0034, 
+    IDC_COMBO_PORT, 0x403, 6, 0
+0x4f43, 0x324d, 0x0035, 
+    IDC_COMBO_BAUDRATE, 0x403, 4, 0
+0x3131, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 4, 0
+0x3033, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 4, 0
+0x3036, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 5, 0
+0x3231, 0x3030, "\000" 
+    IDC_COMBO_BAUDRATE, 0x403, 5, 0
+0x3432, 0x3030, "\000" 
+    IDC_COMBO_BAUDRATE, 0x403, 5, 0
+0x3834, 0x3030, "\000" 
+    IDC_COMBO_BAUDRATE, 0x403, 5, 0
+0x3639, 0x3030, "\000" 
+    IDC_COMBO_BAUDRATE, 0x403, 6, 0
+0x3431, 0x3034, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 6, 0
+0x3931, 0x3032, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 6, 0
+0x3833, 0x3034, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 6, 0
+0x3635, 0x3030, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 6, 0
+0x3735, 0x3036, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 7, 0
+0x3131, 0x3235, 0x3030, "\000" 
+    IDC_COMBO_BAUDRATE, 0x403, 7, 0
+0x3231, 0x3038, 0x3030, "\000" 
+    IDC_COMBO_BAUDRATE, 0x403, 7, 0
+0x3532, 0x3036, 0x3030, "\000" 
+    IDC_COMBO_PARITY, 0x403, 3, 0
+0x4f4e, "\000" 
+    IDC_COMBO_PARITY, 0x403, 4, 0
+0x444f, 0x0044, 
+    IDC_COMBO_PARITY, 0x403, 5, 0
+0x5645, 0x4e45, "\000" 
+    IDC_COMBO_PARITY, 0x403, 5, 0
+0x414d, 0x4b52, "\000" 
+    IDC_COMBO_PARITY, 0x403, 6, 0
+0x5053, 0x4341, 0x0045, 
+    IDC_COMBO_BYTESIZE, 0x403, 2, 0
+0x0034, 
+    IDC_COMBO_BYTESIZE, 0x403, 2, 0
+0x0035, 
+    IDC_COMBO_BYTESIZE, 0x403, 2, 0
+0x0036, 
+    IDC_COMBO_BYTESIZE, 0x403, 2, 0
+0x0037, 
+    IDC_COMBO_BYTESIZE, 0x403, 2, 0
+0x0038, 
+    IDC_COMBO_STOPBITS, 0x403, 2, 0
+0x0031, 
+    IDC_COMBO_STOPBITS, 0x403, 4, 0
+0x2e31, 0x0035, 
+    IDC_COMBO_STOPBITS, 0x403, 2, 0
+0x0032, 
+    0
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\CnCommTestppc.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "afxres.rc"     // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

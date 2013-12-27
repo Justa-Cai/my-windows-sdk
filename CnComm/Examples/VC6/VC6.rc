@@ -1,0 +1,1138 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\VC6.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\VC6.ico"
+IDI_ICON_OFF            ICON    DISCARDABLE     "res\\LedOff.ico"
+IDI_ICON_ON             ICON    DISCARDABLE     "res\\LedOn.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 VC6"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "VC6 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2009",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_VC6_DIALOG DIALOGEX 0, 0, 569, 382
+STYLE DS_CENTER | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "CnComm测试程序"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "Tab1",IDC_TAB,"SysTabControl32",TCS_TOOLTIPS,0,2,562,
+                    350
+END
+
+IDD_DIALOG_CN_COMM DIALOG DISCARDABLE  0, 0, 558, 357
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_EDIT_RX,152,153,397,193,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL
+    EDITTEXT        IDC_EDIT_TX,210,9,339,83,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN | WS_VSCROLL
+    PUSHBUTTON      "新建实例",IDC_BUTTON_NEW_INSTANCE,7,117,43,14
+    PUSHBUTTON      "删除实例",IDC_BUTTON_FREE_INSTANCE,53,117,43,14
+    COMBOBOX        IDC_COMBO_COM_PORT,35,10,50,122,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_PARITY,35,45,50,122,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_BAUDRATE,35,27,50,122,CBS_DROPDOWN | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_BITSSIZE,35,63,50,122,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_STOPBITS,35,81,50,122,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "打开",IDC_BUTTON_OPEN,92,9,50,14
+    PUSHBUTTON      "清除",IDC_BUTTON_CLEAR_RX,153,135,50,14
+    PUSHBUTTON      "发送",IDC_BUTTON_SEND,153,9,50,14,WS_DISABLED
+    PUSHBUTTON      "清除",IDC_BUTTON_CLEAR_TX,153,26,50,14
+    CONTROL         "16进制",IDC_CHECK_TX_HEX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,153,46,40,10
+    CONTROL         "周期发送",IDC_CHECK_AUTO_SEND,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,153,64,48,10
+    COMBOBOX        IDC_COMBO_FLOW_CTRL,35,99,50,122,CBS_DROPDOWNLIST | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "DCB",IDC_BUTTON_DCB,92,26,50,14,WS_DISABLED
+    LTEXT           "毫秒",IDC_STATIC,186,83,17,8
+    CONTROL         "16进制",IDC_CHECK_RX_HEX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,210,137,35,10
+    PUSHBUTTON      "发送文件",IDC_BUTTON_SEND_FILE,209,98,50,14,WS_DISABLED
+    EDITTEXT        IDC_EDIT_FILE_FOR_SEND,266,98,143,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "浏览",IDC_BUTTON_BROWER_TX,414,98,50,14
+    PUSHBUTTON      "装载文件",IDC_BUTTON_LOAD_FILE,153,98,50,14
+    PUSHBUTTON      "浏览",IDC_BUTTON_BROWER_RX,494,135,50,14
+    PUSHBUTTON      "超时",IDC_BUTTON_TIMEOUTS,92,44,50,14,WS_DISABLED
+    PUSHBUTTON      "属性",IDC_BUTTON_PROPERTIES,92,62,50,14,WS_DISABLED
+    EDITTEXT        IDC_EDIT_FILE_FOR_RECV,348,135,143,14,ES_AUTOHSCROLL
+    LTEXT           "串口",IDC_STATIC,7,12,16,8
+    LTEXT           "波特率",IDC_STATIC,7,29,25,8
+    LTEXT           "校验位",IDC_STATIC,7,47,25,8
+    LTEXT           "数据位",IDC_STATIC,7,65,25,8
+    LTEXT           "停止位",IDC_STATIC,7,83,25,8
+    GROUPBOX        "发送",IDC_STATIC_TX,146,0,408,120
+    EDITTEXT        IDC_EDIT_RX_COUNT,103,80,39,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_TX_COUNT,103,98,39,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "收",IDC_STATIC,92,83,8,8
+    LTEXT           "发",IDC_STATIC,92,101,9,8
+    PUSHBUTTON      "计数清零",IDC_BUTTON_RESET,99,117,43,14,BS_MULTILINE
+    EDITTEXT        IDC_EDIT_RX_QUEUE,35,245,39,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER
+    EDITTEXT        IDC_EDIT_TX_QUEUE,35,265,39,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER
+    EDITTEXT        IDC_EDIT_RX_BUFFER,104,245,39,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_TX_BUFFER,104,265,39,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "RX队列",IDC_STATIC,7,248,25,8
+    LTEXT           "RX缓冲",IDC_STATIC,78,248,24,8
+    GROUPBOX        "配置:关闭时有效",IDC_STATIC,7,138,136,48,WS_GROUP
+    CONTROL         "EN_THREAD",IDC_CHECK_EN_THREAD,"Button",BS_AUTOCHECKBOX | 
+                    BS_FLAT | WS_DISABLED | WS_GROUP | WS_TABSTOP,12,148,52,
+                    10
+    CONTROL         "EN_OVERLAPPED",IDC_CHECK_EN_OVERLAPPED,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT | WS_GROUP | WS_TABSTOP,76,148,
+                    63,10
+    CONTROL         "EN_TX_BUFFER",IDC_CHECK_EN_TX_BUFFER,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT | WS_GROUP | WS_TABSTOP,76,160,
+                    64,10
+    CONTROL         "EN_RX_BUFFER",IDC_CHECK_EN_RX_BUFFER,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT | WS_GROUP | WS_TABSTOP,12,160,
+                    64,10
+    CONTROL         "EN_TX_THREAD",IDC_CHECK_EN_TX_THREAD,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT | WS_GROUP | WS_TABSTOP,12,172,
+                    64,10
+    CONTROL         "EN_RX_THREAD",IDC_CHECK_EN_RX_THREAD,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT | WS_GROUP | WS_TABSTOP,76,172,
+                    64,10
+    CONTROL         "DTR",IDC_CHECK_DTR,"Button",BS_AUTOCHECKBOX | BS_FLAT | 
+                    WS_DISABLED | WS_TABSTOP,12,203,28,10
+    CONTROL         "BREAK",IDC_CHECK_BREAK,"Button",BS_AUTOCHECKBOX | 
+                    BS_FLAT | WS_DISABLED | WS_TABSTOP,42,203,32,10
+    CONTROL         "RTS",IDC_CHECK_RTS,"Button",BS_AUTOCHECKBOX | BS_FLAT | 
+                    WS_DISABLED | WS_TABSTOP,12,218,28,10
+    CONTROL         "XON",IDC_CHECK_XON,"Button",BS_AUTOCHECKBOX | BS_FLAT | 
+                    WS_DISABLED | WS_TABSTOP,42,218,30,10
+    GROUPBOX        "输出信号",IDC_STATIC,7,191,70,44
+    CONTROL         "RLSD",IDC_CHECK_RLSD,"Button",BS_AUTOCHECKBOX | BS_FLAT | 
+                    WS_DISABLED | WS_TABSTOP,82,203,32,10
+    CONTROL         "RING",IDC_CHECK_RING,"Button",BS_AUTOCHECKBOX | BS_FLAT | 
+                    WS_DISABLED | WS_TABSTOP,82,218,32,10
+    CONTROL         "DSR",IDC_CHECK_DSR,"Button",BS_AUTOCHECKBOX | BS_FLAT | 
+                    WS_DISABLED | WS_TABSTOP,114,203,23,10
+    CONTROL         "CTS",IDC_CHECK_CTS,"Button",BS_AUTOCHECKBOX | BS_FLAT | 
+                    WS_DISABLED | WS_TABSTOP,114,218,23,10
+    GROUPBOX        "调制解调信号",IDC_STATIC,76,191,67,44
+    LTEXT           "流控制",IDC_STATIC,7,101,25,8
+    GROUPBOX        "接收",IDC_STATIC_RX,146,125,408,227
+    LTEXT           "mailto:wushaojian@21cn.com",IDC_STATIC_MAIL,7,307,104,8
+    LTEXT           "http://blog.csdn.net/wujian53",IDC_STATIC_BLOG1,7,323,
+                    117,8
+    LTEXT           "http://www.cppblog/com/llbird",IDC_STATIC_BLOG2,7,337,
+                    117,8
+    LTEXT           "CnComm 1.5 测试程序",IDC_STATIC,7,293,77,8
+    LTEXT           "L",IDC_STATIC_LAMP,23,12,8,8
+    LTEXT           "TX队列",IDC_STATIC,7,268,24,8
+    LTEXT           "TX缓冲",IDC_STATIC,78,268,24,8
+    EDITTEXT        IDC_EDIT_CYCLE,153,80,30,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "显示",IDC_CHECK_DISP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,250,136,28,11
+    CONTROL         "自动转存文件",IDC_CHECK_SAVE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,283,137,63,10
+END
+
+IDD_DIALOG_DCB DIALOG DISCARDABLE  0, 0, 393, 191
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DCB设置"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "DCBlength",IDC_STATIC,47,10,37,8,WS_DISABLED
+    LTEXT           "BaudRate",IDC_STATIC,51,27,33,8
+    LTEXT           "fBinary:1",IDC_STATIC,47,44,37,8,WS_DISABLED
+    LTEXT           "fParity:1",IDC_STATIC,47,60,37,8
+    LTEXT           "fOutxCtsFlow:1",IDC_STATIC,27,76,57,8
+    LTEXT           "fDtrControl:2",IDC_STATIC,31,92,53,8
+    LTEXT           "fDsrSensitivity:1",IDC_STATIC,15,108,69,8
+    LTEXT           "fTXContinueOnXoff:1",IDC_STATIC,7,125,77,8
+    LTEXT           "fOutX:1",IDC_STATIC,55,142,29,8
+    LTEXT           "fInX:1",IDC_STATIC,173,10,25,8
+    LTEXT           "fErrorChar:1",IDC_STATIC,148,27,49,8
+    LTEXT           "fNull:1",IDC_STATIC,168,44,29,8
+    LTEXT           "fRtsControl:2",IDC_STATIC,144,60,53,8
+    LTEXT           "fAbortOnError:1",IDC_STATIC,136,76,61,8
+    LTEXT           "fDummy2:17",IDC_STATIC,156,92,41,8,WS_DISABLED
+    LTEXT           "wReserved",IDC_STATIC,160,108,37,8,WS_DISABLED
+    LTEXT           "XonLim",IDC_STATIC,172,125,25,8
+    LTEXT           "XoffLim",IDC_STATIC,168,142,29,8
+    LTEXT           "ByteSize",IDC_STATIC,268,10,33,8
+    LTEXT           "Parity",IDC_STATIC,276,27,25,8
+    LTEXT           "StopBits",IDC_STATIC,268,44,33,8
+    LTEXT           "XonChar",IDC_STATIC,272,60,29,8
+    LTEXT           "XoffChar",IDC_STATIC,268,76,33,8
+    LTEXT           "ErrorChar",IDC_STATIC,264,92,37,8
+    LTEXT           "EofChar",IDC_STATIC,272,108,29,8
+    LTEXT           "EvtChar",IDC_STATIC,272,125,29,8
+    LTEXT           "wReserved1",IDC_STATIC,260,142,41,8,WS_DISABLED
+    EDITTEXT        IDC_EDIT_DCBlength,88,7,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_BaudRate,88,24,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_fBinary,88,42,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_fParity,88,57,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_fOutxCtsFlow,88,73,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_fDtrControl,88,89,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_fDsrSensitivity,88,105,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_fTXContinueOnXoff,88,122,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_fOutX,88,139,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_fInX,202,7,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_fErrorChar,202,24,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_fNull,202,42,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_fRtsControl,202,57,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_fAbortOnError,202,73,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_fDummy2,202,89,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_wReserved,202,105,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_XonLim,202,124,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_XoffLim,202,139,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ByteSize,306,7,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Parity,306,24,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_StopBits,306,42,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_XonChar,306,57,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_XoffChar,306,73,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ErrorChar,306,89,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_EofChar,306,105,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_EvtChar,306,122,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_wReserved1,306,139,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    PUSHBUTTON      "应用",IDC_BUTTON_SET,132,170,50,14
+    PUSHBUTTON      "取消",IDCANCEL,210,170,50,14
+END
+
+IDD_DIALOG_TIMEOUTS DIALOG DISCARDABLE  0, 0, 202, 125
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "超时设置"
+FONT 9, "宋体"
+BEGIN
+    PUSHBUTTON      "取消",IDCANCEL,105,104,50,14
+    LTEXT           "ReadIntervalTimeout",IDC_STATIC,44,10,77,8
+    LTEXT           "ReadTotalTimeoutMultiplier",IDC_STATIC,16,27,105,8
+    LTEXT           "ReadTotalTimeoutConstant",IDC_STATIC,24,44,97,8
+    LTEXT           "WriteTotalTimeoutMultiplier",IDC_STATIC,12,60,109,8
+    LTEXT           "WriteTotalTimeoutConstant",IDC_STATIC,20,76,101,8
+    EDITTEXT        IDC_EDIT_RIT,130,7,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_RTTM,130,24,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_RTTC,130,42,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_WTTM,130,57,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_WTTC,130,73,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "应用",IDC_BUTTON_SET,46,104,50,14
+END
+
+IDD_DIALOG_PROPERTIES DIALOG DISCARDABLE  0, 0, 451, 211
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "端口属性"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "wPacketLength",IDC_STATIC,27,10,53,8
+    LTEXT           "wPacketVersion",IDC_STATIC,23,26,57,8
+    LTEXT           "dwServiceMask",IDC_STATIC,27,42,53,8
+    LTEXT           "dwMaxTxQueue",IDC_STATIC,31,58,49,8
+    LTEXT           "dwMaxRxQueue",IDC_STATIC,31,74,49,8
+    LTEXT           "dwMaxBaud",IDC_STATIC,43,90,37,8
+    LTEXT           "dwProvSubType",IDC_STATIC,27,106,53,8
+    LTEXT           "dwProvCapabilities",IDC_STATIC,7,122,73,8
+    LTEXT           "dwSettableParams",IDC_STATIC,15,138,65,8
+    LTEXT           "dwSettableBaud",IDC_STATIC,23,154,57,8
+    LTEXT           "wSettableData",IDC_STATIC,27,170,53,8
+    LTEXT           "wSettableStopParity",IDC_STATIC,159,12,77,8
+    LTEXT           "dwCurrentTxQueue",IDC_STATIC,171,28,65,8
+    LTEXT           "dwCurrentRxQueue",IDC_STATIC,171,44,65,8
+    LTEXT           "dwProvSpec1",IDC_STATIC,191,60,45,8
+    LTEXT           "dwProvSpec2",IDC_STATIC,191,76,45,8
+    LTEXT           "dwRequiredSize",IDC_STATIC,179,92,57,8
+    LTEXT           "dwDevSpecificOffset",IDC_STATIC,159,108,77,8
+    LTEXT           "dwDevSpecificSize",IDC_STATIC,167,122,69,8
+    LTEXT           "dwModemProviderVersion",IDC_STATIC,147,138,89,8
+    LTEXT           "dwModemManufacturerOffset",IDC_STATIC,135,154,101,8
+    LTEXT           "dwModemManufacturerSize",IDC_STATIC,143,170,93,8
+    LTEXT           "dwModemModelOffset",IDC_STATIC,298,8,73,8
+    LTEXT           "dwModemModelSize",IDC_STATIC,306,24,65,8
+    LTEXT           "dwModemVersionOffset",IDC_STATIC,290,60,81,8
+    LTEXT           "dwDialOptions",IDC_STATIC,318,75,53,8
+    EDITTEXT        IDC_EDIT_wPacketLength,89,7,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_wPacketVersion,89,23,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwServiceMask,89,39,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwMaxTxQueue,89,55,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwMaxRxQueue,89,71,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwMaxBaud,89,87,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwProvSubType,89,103,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwProvCapabilities,89,119,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwSettableParams,89,135,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwSettableBaud,89,151,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_wSettableData,89,167,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_wSettableStopParity,239,8,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwCurrentTxQueue,239,24,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwCurrentRxQueue,239,40,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwProvSpec1,239,57,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwProvSpec2,239,72,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwRequiredSize,239,88,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwDevSpecificOffset,239,104,40,14,
+                    ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwDevSpecificSize,239,119,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwModemProviderVersion,239,135,40,14,
+                    ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwModemManufacturerOffset,239,151,40,14,
+                    ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwModemManufacturerSize,239,167,40,14,
+                    ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwModemModelOffset,375,7,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwModemModelSize,375,23,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwModemVersionOffset,375,57,40,14,
+                    ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwDialOptions,375,74,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    LTEXT           "dwCallSetupFailTimer",IDC_STATIC,290,91,81,8
+    LTEXT           "dwInactivityTimeout",IDC_STATIC,294,107,77,8
+    LTEXT           "dwSpeakerVolume",IDC_STATIC,310,123,61,8
+    LTEXT           "dwSpeakerMode",IDC_STATIC,318,141,53,8
+    LTEXT           "dwModemOptions",IDC_STATIC,314,157,57,8
+    LTEXT           "dwMaxDTERate",IDC_STATIC,322,173,49,8
+    LTEXT           "dwMaxDCERate",IDC_STATIC,322,189,49,8
+    EDITTEXT        IDC_EDIT_dwCallSetupFailTimer,375,90,40,14,
+                    ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwInactivityTimeout,375,106,40,14,
+                    ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwSpeakerVolume,375,122,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwSpeakerMode,375,138,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwModemOptions,375,154,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwMaxDTERate,375,170,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT_dwMaxDCERate,375,186,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    PUSHBUTTON      "取消",IDCANCEL,198,190,50,14
+    LTEXT           "dwModemVersionSize",IDC_STATIC,298,42,73,8
+    EDITTEXT        IDC_EDIT_dwModemVersionSize,375,40,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "CnComm Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "CnComm\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2009\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "CnComm.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "CnComm 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_VC6_DIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 562
+        BOTTOMMARGIN, 375
+    END
+
+    IDD_DIALOG_CN_COMM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 554
+        BOTTOMMARGIN, 352
+    END
+
+    IDD_DIALOG_DCB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 386
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+    END
+
+    IDD_DIALOG_TIMEOUTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+    END
+
+    IDD_DIALOG_PROPERTIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 444
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 204
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIALOG_CN_COMM DLGINIT
+BEGIN
+    IDC_COMBO_COM_PORT, 0x403, 5, 0
+0x4f43, 0x314d, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 5, 0
+0x4f43, 0x324d, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 5, 0
+0x4f43, 0x334d, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 5, 0
+0x4f43, 0x344d, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 5, 0
+0x4f43, 0x354d, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 5, 0
+0x4f43, 0x364d, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 5, 0
+0x4f43, 0x374d, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 5, 0
+0x4f43, 0x384d, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 5, 0
+0x4f43, 0x394d, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x314d, 0x0030, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x314d, 0x0031, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x314d, 0x0032, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x314d, 0x0033, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x314d, 0x0034, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x314d, 0x0035, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x314d, 0x0036, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x314d, 0x0037, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x314d, 0x0038, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x314d, 0x0039, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x324d, 0x0030, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x324d, 0x0031, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x324d, 0x0032, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x324d, 0x0033, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x324d, 0x0034, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x324d, 0x0035, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x324d, 0x0036, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x324d, 0x0037, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x324d, 0x0038, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x324d, 0x0039, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x334d, 0x0030, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x334d, 0x0031, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x334d, 0x0032, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x334d, 0x0033, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x334d, 0x0034, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x334d, 0x0035, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x334d, 0x0036, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x334d, 0x0037, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x334d, 0x0038, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x334d, 0x0039, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x344d, 0x0030, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x344d, 0x0031, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x344d, 0x0032, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x344d, 0x0033, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x344d, 0x0034, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x344d, 0x0035, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x344d, 0x0036, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x344d, 0x0037, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x344d, 0x0038, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x344d, 0x0039, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x354d, 0x0030, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x354d, 0x0031, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x354d, 0x0032, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x354d, 0x0033, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x354d, 0x0034, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x354d, 0x0035, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x354d, 0x0036, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x354d, 0x0037, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x354d, 0x0038, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x354d, 0x0039, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x364d, 0x0030, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x364d, 0x0031, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x364d, 0x0032, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x364d, 0x0033, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x364d, 0x0034, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x364d, 0x0035, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x364d, 0x0036, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x364d, 0x0037, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x364d, 0x0038, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x364d, 0x0039, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x374d, 0x0030, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x374d, 0x0031, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x374d, 0x0032, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x374d, 0x0033, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x374d, 0x0034, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x374d, 0x0035, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x374d, 0x0036, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x374d, 0x0037, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x374d, 0x0038, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x374d, 0x0039, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x384d, 0x0030, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x384d, 0x0031, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x384d, 0x0032, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x384d, 0x0033, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x384d, 0x0034, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x384d, 0x0035, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x384d, 0x0036, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x384d, 0x0037, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x384d, 0x0038, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x384d, 0x0039, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x394d, 0x0030, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x394d, 0x0031, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x394d, 0x0032, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x394d, 0x0033, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x394d, 0x0034, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x394d, 0x0035, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x394d, 0x0036, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x394d, 0x0037, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x394d, 0x0038, 
+    IDC_COMBO_COM_PORT, 0x403, 6, 0
+0x4f43, 0x394d, 0x0039, 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3030, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3130, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3230, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3330, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3430, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3530, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3630, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3730, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3830, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3930, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3031, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3131, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3231, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3331, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3431, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3531, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3631, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3731, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3831, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3931, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3032, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3132, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3232, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3332, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3432, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3532, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3632, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3732, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3832, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3932, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3033, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3133, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3233, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3333, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3433, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3533, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3633, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3733, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3833, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3933, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3034, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3134, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3234, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3334, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3434, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3534, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3634, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3734, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3834, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3934, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3035, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3135, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3235, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3335, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3435, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3535, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3635, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3735, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3835, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3935, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3036, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3136, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3236, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3336, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3436, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3536, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3636, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3736, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3836, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3936, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3037, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3137, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3237, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3337, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3437, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3537, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3637, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3737, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3837, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3937, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3038, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3138, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3238, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3338, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3438, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3538, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3638, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3738, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3838, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3938, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3039, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3139, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3239, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3339, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3439, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3539, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3639, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3739, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3839, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x314d, 0x3939, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3030, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3130, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3230, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3330, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3430, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3530, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3630, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3730, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3830, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3930, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3031, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3131, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3231, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3331, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3431, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3531, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3631, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3731, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3831, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3931, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3032, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3132, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3232, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3332, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3432, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3532, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3632, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3732, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3832, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3932, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3033, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3133, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3233, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3333, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3433, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3533, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3633, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3733, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3833, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3933, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3034, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3134, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3234, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3334, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3434, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3534, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3634, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3734, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3834, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3934, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3035, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3135, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3235, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3335, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3435, "\000" 
+    IDC_COMBO_COM_PORT, 0x403, 7, 0
+0x4f43, 0x324d, 0x3535, "\000" 
+    IDC_COMBO_PARITY, 0x403, 3, 0
+0x4f4e, "\000" 
+    IDC_COMBO_PARITY, 0x403, 4, 0
+0x444f, 0x0044, 
+    IDC_COMBO_PARITY, 0x403, 5, 0
+0x5645, 0x4e45, "\000" 
+    IDC_COMBO_PARITY, 0x403, 5, 0
+0x414d, 0x4b52, "\000" 
+    IDC_COMBO_PARITY, 0x403, 6, 0
+0x5053, 0x4341, 0x0045, 
+    IDC_COMBO_BAUDRATE, 0x403, 4, 0
+0x3131, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 4, 0
+0x3033, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 4, 0
+0x3036, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 5, 0
+0x3231, 0x3030, "\000" 
+    IDC_COMBO_BAUDRATE, 0x403, 5, 0
+0x3432, 0x3030, "\000" 
+    IDC_COMBO_BAUDRATE, 0x403, 5, 0
+0x3834, 0x3030, "\000" 
+    IDC_COMBO_BAUDRATE, 0x403, 5, 0
+0x3639, 0x3030, "\000" 
+    IDC_COMBO_BAUDRATE, 0x403, 6, 0
+0x3431, 0x3034, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 6, 0
+0x3931, 0x3032, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 6, 0
+0x3833, 0x3034, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 6, 0
+0x3635, 0x3030, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 6, 0
+0x3735, 0x3036, 0x0030, 
+    IDC_COMBO_BAUDRATE, 0x403, 7, 0
+0x3131, 0x3235, 0x3030, "\000" 
+    IDC_COMBO_BAUDRATE, 0x403, 7, 0
+0x3231, 0x3038, 0x3030, "\000" 
+    IDC_COMBO_BAUDRATE, 0x403, 7, 0
+0x3532, 0x3036, 0x3030, "\000" 
+    IDC_COMBO_BITSSIZE, 0x403, 2, 0
+0x0034, 
+    IDC_COMBO_BITSSIZE, 0x403, 2, 0
+0x0035, 
+    IDC_COMBO_BITSSIZE, 0x403, 2, 0
+0x0036, 
+    IDC_COMBO_BITSSIZE, 0x403, 2, 0
+0x0037, 
+    IDC_COMBO_BITSSIZE, 0x403, 2, 0
+0x0038, 
+    IDC_COMBO_STOPBITS, 0x403, 2, 0
+0x0031, 
+    IDC_COMBO_STOPBITS, 0x403, 4, 0
+0x2e31, 0x0035, 
+    IDC_COMBO_STOPBITS, 0x403, 2, 0
+0x0032, 
+    IDC_COMBO_FLOW_CTRL, 0x403, 3, 0
+0x4f4e, "\000" 
+    IDC_COMBO_FLOW_CTRL, 0x403, 10, 0
+0x4548, 0x5241, 0x5744, 0x5241, 0x0045, 
+    IDC_COMBO_FLOW_CTRL, 0x403, 9, 0
+0x4f58, 0x2f4e, 0x4f58, 0x4646, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 CnComm(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\VC6.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

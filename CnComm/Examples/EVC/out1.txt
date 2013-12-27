@@ -1,0 +1,115 @@
+Debug Serial Init
+
+SysInit: GDTBase=808b0040 IDTBase=808b94a0 KData=808c1800
+Windows CE Kernel for i486 Built on Dec 16 2001 at 18:18:13
+g_PageDir = 808c2000
+RTC - Status Reg B - 0x02
+X86Init done.
+Checking if CPU = emulator...
+Yes - CPU = emulator
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000000
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000000
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000000
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000000
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000000
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000000
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000000
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000000
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000000
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000000
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000000
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000000
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000000
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000000
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f270 EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f48c EA=00000001
+Exception 00e Thread=82ec72d0 Proc=22f4dd52 'gwes.exe'
+AKY=00000089 PC=0003256a ESP=1002f270 EA=00000001

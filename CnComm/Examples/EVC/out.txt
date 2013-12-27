@@ -1,0 +1,7 @@
+Debug Serial Init
+
+SysInit: GDTBase=808b0040 IDTBase=808b94a0 KData=808c1800
+Windows CE Kernel for i486 Built on Dec 16 2001 at 18:18:13
+g_PageDir = 808c2000
+RTC - Status Reg B - 0x02
+X86Init done.
