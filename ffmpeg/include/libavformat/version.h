@@ -27,11 +27,11 @@
  * Libavformat version macros
  */
 
-#include "libavutil/version.h"
+#include "libavutil/avutil.h"
 
 #define LIBAVFORMAT_VERSION_MAJOR 55
-#define LIBAVFORMAT_VERSION_MINOR 35
-#define LIBAVFORMAT_VERSION_MICRO 101
+#define LIBAVFORMAT_VERSION_MINOR  0
+#define LIBAVFORMAT_VERSION_MICRO 100
 
 #define LIBAVFORMAT_VERSION_INT AV_VERSION_INT(LIBAVFORMAT_VERSION_MAJOR, \
                                                LIBAVFORMAT_VERSION_MINOR, \
@@ -48,10 +48,13 @@
  * dropped at a future version bump. The defines themselves are not part of
  * the public API and may change, break or disappear at any time.
  */
-#ifndef FF_API_REFERENCE_DTS
-#define FF_API_REFERENCE_DTS            (LIBAVFORMAT_VERSION_MAJOR < 56)
-#endif
 
+#ifndef FF_API_OLD_AVIO
+#define FF_API_OLD_AVIO                (LIBAVFORMAT_VERSION_MAJOR < 55)
+#endif
+#ifndef FF_API_PKT_DUMP
+#define FF_API_PKT_DUMP                (LIBAVFORMAT_VERSION_MAJOR < 54)
+#endif
 #ifndef FF_API_ALLOC_OUTPUT_CONTEXT
 #define FF_API_ALLOC_OUTPUT_CONTEXT    (LIBAVFORMAT_VERSION_MAJOR < 56)
 #endif
@@ -69,9 +72,6 @@
 #endif
 #ifndef FF_API_READ_PACKET
 #define FF_API_READ_PACKET             (LIBAVFORMAT_VERSION_MAJOR < 56)
-#endif
-#ifndef FF_API_ASS_SSA
-#define FF_API_ASS_SSA                 (LIBAVFORMAT_VERSION_MAJOR < 56)
 #endif
 #ifndef FF_API_R_FRAME_RATE
 #define FF_API_R_FRAME_RATE            1

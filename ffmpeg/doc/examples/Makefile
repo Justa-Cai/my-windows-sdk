@@ -7,29 +7,24 @@ FFMPEG_LIBS=    libavdevice                        \
                 libswscale                         \
                 libavutil                          \
 
-CFLAGS += -Wall -g
+CFLAGS += -Wall -O2 -g
 CFLAGS := $(shell pkg-config --cflags $(FFMPEG_LIBS)) $(CFLAGS)
 LDLIBS := $(shell pkg-config --libs $(FFMPEG_LIBS)) $(LDLIBS)
 
-EXAMPLES=       avio_reading                       \
-                avcodec                            \
-                demuxing_decoding                  \
+EXAMPLES=       decoding_encoding                  \
+                demuxing                           \
                 filtering_video                    \
                 filtering_audio                    \
                 metadata                           \
                 muxing                             \
-                remuxing                           \
                 resampling_audio                   \
                 scaling_video                      \
-                transcode_aac                      \
-                transcoding                        \
 
 OBJS=$(addsuffix .o,$(EXAMPLES))
 
 # the following examples make explicit use of the math library
-avcodec:           LDLIBS += -lm
+decoding_encoding: LDLIBS += -lm
 muxing:            LDLIBS += -lm
-resampling_audio:  LDLIBS += -lm
 
 .phony: all clean-test clean
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<!-- Created on March 26, 2014 by texi2html 1.82 -->
+<!-- Created on March 27, 2013 by texi2html 1.82 -->
 <!--
 texi2html was written by: 
             Lionel Cons <Lionel.Cons@cern.ch> (original author)
@@ -16,6 +16,8 @@ Send bugs and suggestions to <texi2html-bug@nongnu.org>
 
 <meta name="description" content="FFmpeg Automated Testing Environment: ">
 <meta name="keywords" content="FFmpeg documentation : FFmpeg Automated Testing Environment: ">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.82">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="default.css" />
@@ -24,7 +26,6 @@ Send bugs and suggestions to <texi2html-bug@nongnu.org>
 </head>
 <body>
 <div id="container">
-<div id="body">
 
 <a name="Top"></a>
 <a name="SEC_Top"></a>
@@ -66,7 +67,7 @@ by visiting this website:
 </p>
 <p>  This is especially recommended for all people contributing source
 code to FFmpeg, as it can be seen if some test on some platform broke
-with their recent contribution. This usually happens on the platforms
+with there recent contribution. This usually happens on the platforms
 the developers could not test on.
 </p>
 <p>  The second part of this document describes how you can run FATE to
@@ -138,20 +139,16 @@ samples=                                 # path to samples directory
 workdir=                                 # directory in which to do all the work
 #fate_recv=&quot;ssh -T fate@fate.ffmpeg.org&quot; # command to submit report
 comment=                                 # optional description
-build_only=     # set to &quot;yes&quot; for a compile-only instance that skips tests
 
 # the following are optional and map to configure options
 arch=
 cpu=
 cross_prefix=
-as=
 cc=
-ld=
 target_os=
 sysroot=
 target_exec=
 target_path=
-target_samples=
 extra_cflags=
 extra_ldflags=
 extra_libs=
@@ -193,15 +190,8 @@ of the server and to accept its host key. This can usually be achieved by
 running your SSH client manually and killing it after you accepted the key.
 The FATE server&rsquo;s fingerprint is:
 </p>
-<dl compact="compact">
-<dt> &lsquo;<samp>RSA</samp>&rsquo;</dt>
-<dd><p>   d3:f1:83:97:a4:75:2b:a6:fb:d6:e8:aa:81:93:97:51
-</p></dd>
-<dt> &lsquo;<samp>ECDSA</samp>&rsquo;</dt>
-<dd><p>   76:9f:68:32:04:1e:d5:d4:ec:47:3f:dc:fc:18:17:86
-</p></dd>
-</dl>
-
+<p>  b1:31:c8:79:3f:04:1d:f8:f2:23:26:5a:fd:55:fa:92
+</p>
 <p>  If you have problems connecting to the FATE server, it may help to try out
 the <code>ssh</code> command with one or more &lsquo;<samp>-v</samp>&rsquo; options. You should
 get detailed output concerning your SSH configuration and the authentication
@@ -219,15 +209,15 @@ the synchronisation of the samples directory.
 
 <dl compact="compact">
 <dt> &lsquo;<samp>fate-rsync</samp>&rsquo;</dt>
-<dd><p>Download/synchronize sample files to the configured samples directory.
+<dd><p>    Download/synchronize sample files to the configured samples directory.
 </p>
 </dd>
 <dt> &lsquo;<samp>fate-list</samp>&rsquo;</dt>
-<dd><p>Will list all fate/regression test targets.
+<dd><p>    Will list all fate/regression test targets.
 </p>
 </dd>
 <dt> &lsquo;<samp>fate</samp>&rsquo;</dt>
-<dd><p>Run the FATE test suite (requires the fate-suite dataset).
+<dd><p>    Run the FATE test suite (requires the fate-suite dataset).
 </p></dd>
 </dl>
 
@@ -236,7 +226,7 @@ the synchronisation of the samples directory.
 
 <dl compact="compact">
 <dt> &lsquo;<samp>V</samp>&rsquo;</dt>
-<dd><p>Verbosity level, can be set to 0, 1 or 2.
+<dd><p>    Verbosity level, can be set to 0, 1 or 2.
     </p><ul>
 <li> 0: show just the test arguments
         </li><li> 1: show just the command used in the test
@@ -245,33 +235,26 @@ the synchronisation of the samples directory.
 
 </dd>
 <dt> &lsquo;<samp>SAMPLES</samp>&rsquo;</dt>
-<dd><p>Specify or override the path to the FATE samples at make time, it has a
-meaning only while running the regression tests.
+<dd><p>    Specify or override the path to the FATE samples at make time, it has a
+    meaning only while running the regression tests.
 </p>
 </dd>
 <dt> &lsquo;<samp>THREADS</samp>&rsquo;</dt>
-<dd><p>Specify how many threads to use while running regression tests, it is
-quite useful to detect thread-related regressions.
-</p>
-</dd>
+<dd><p>    Specify how many threads to use while running regression tests, it is
+    quite useful to detect thread-related regressions.
+</p></dd>
 <dt> &lsquo;<samp>THREAD_TYPE</samp>&rsquo;</dt>
-<dd><p>Specify which threading strategy test, either <var>slice</var> or <var>frame</var>,
-by default <var>slice+frame</var>
-</p>
-</dd>
+<dd><p>    Specify which threading strategy test, either <var>slice</var> or <var>frame</var>,
+    by default <var>slice+frame</var>
+</p></dd>
 <dt> &lsquo;<samp>CPUFLAGS</samp>&rsquo;</dt>
-<dd><p>Specify CPU flags.
-</p>
-</dd>
+<dd><p>    Specify CPU flags.
+</p></dd>
 <dt> &lsquo;<samp>TARGET_EXEC</samp>&rsquo;</dt>
-<dd><p>Specify or override the wrapper used to run the tests.
-The <var>TARGET_EXEC</var> option provides a way to run FATE wrapped in
-<code>valgrind</code>, <code>qemu-user</code> or <code>wine</code> or on remote targets
-through <code>ssh</code>.
-</p>
-</dd>
-<dt> &lsquo;<samp>GEN</samp>&rsquo;</dt>
-<dd><p>Set to <var>1</var> to generate the missing or mismatched references.
+<dd><p>    Specify or override the wrapper used to run the tests.
+    The <var>TARGET_EXEC</var> option provides a way to run FATE wrapped in
+    <code>valgrind</code>, <code>qemu-user</code> or <code>wine</code> or on remote targets
+    through <code>ssh</code>.
 </p></dd>
 </dl>
 
@@ -281,4 +264,4 @@ through <code>ssh</code>.
 <table><tr><td>&nbsp;</td><td><pre class="example">make V=1 SAMPLES=/var/fate/samples THREADS=2 CPUFLAGS=mmx fate
 </pre></td></tr></table>
 <footer class="footer pagination-right">
-<span class="label label-info">This document was generated by <em>Kyle Schwarz</em> on <em>March 26, 2014</em> using <a href="http://www.nongnu.org/texi2html/"><em>texi2html 1.82</em></a>.</span></footer></div></div></body>
+<span class="label label-info">This document was generated by <em>Kyle Schwarz</em> on <em>March 27, 2013</em> using <a href="http://www.nongnu.org/texi2html/"><em>texi2html 1.82</em></a>.</span></footer></div>

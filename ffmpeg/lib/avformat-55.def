@@ -15,32 +15,17 @@ EXPORTS
     av_find_program_from_stream
     av_find_stream_info
     av_fmt_ctx_get_duration_estimation_method
-    av_format_get_audio_codec
-    av_format_get_control_message_cb
-    av_format_get_metadata_header_padding
-    av_format_get_opaque
-    av_format_get_probe_score
-    av_format_get_subtitle_codec
-    av_format_get_video_codec
-    av_format_set_audio_codec
-    av_format_set_control_message_cb
-    av_format_set_metadata_header_padding
-    av_format_set_opaque
-    av_format_set_subtitle_codec
-    av_format_set_video_codec
     av_get_frame_filename
     av_get_output_timestamp
     av_get_packet
     av_guess_codec
     av_guess_format
-    av_guess_frame_rate
     av_guess_sample_aspect_ratio
     av_hex_dump
     av_hex_dump_log
     av_iformat_next
     av_index_search_timestamp
     av_interleaved_write_frame
-    av_interleaved_write_uncoded_frame
     av_match_ext
     av_new_program
     av_new_stream
@@ -48,7 +33,6 @@ EXPORTS
     av_pkt_dump2
     av_pkt_dump_log2
     av_probe_input_buffer
-    av_probe_input_buffer2
     av_probe_input_format
     av_probe_input_format2
     av_probe_input_format3
@@ -59,6 +43,8 @@ EXPORTS
     av_register_all
     av_register_input_format
     av_register_output_format
+    av_register_rdt_dynamic_payload_handlers
+    av_register_rtp_dynamic_payload_handlers
     av_sdp_create
     av_seek_frame
     av_set_pts_info
@@ -67,8 +53,6 @@ EXPORTS
     av_url_split
     av_write_frame
     av_write_trailer
-    av_write_uncoded_frame
-    av_write_uncoded_frame_query
     avformat_alloc_context
     avformat_alloc_output_context
     avformat_alloc_output_context2
@@ -77,8 +61,6 @@ EXPORTS
     avformat_find_stream_info
     avformat_free_context
     avformat_get_class
-    avformat_get_mov_audio_tags
-    avformat_get_mov_video_tags
     avformat_get_riff_audio_tags
     avformat_get_riff_video_tags
     avformat_license
@@ -98,7 +80,6 @@ EXPORTS
     avio_close_dyn_buf
     avio_closep
     avio_enum_protocols
-    avio_find_protocol_name
     avio_flush
     avio_get_str
     avio_get_str16be
@@ -157,7 +138,6 @@ EXPORTS
     ffurl_seek
     ffurl_size
     ffurl_write
-    get_codec_guid
     get_crc_table
     get_extension
     url_feof

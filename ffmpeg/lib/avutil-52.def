@@ -1,6 +1,5 @@
 EXPORTS
     av_add_q
-    av_add_stable
     av_adler32_update
     av_aes_alloc
     av_aes_crypt
@@ -23,7 +22,6 @@ EXPORTS
     av_blowfish_crypt_ecb
     av_blowfish_init
     av_bmg_get
-    av_bprint_append_data
     av_bprint_channel_layout
     av_bprint_chars
     av_bprint_clear
@@ -38,8 +36,6 @@ EXPORTS
     av_buffer_allocz
     av_buffer_create
     av_buffer_default_free
-    av_buffer_get_opaque
-    av_buffer_get_ref_count
     av_buffer_is_writable
     av_buffer_make_writable
     av_buffer_pool_get
@@ -52,7 +48,6 @@ EXPORTS
     av_channel_layout_extract_channel
     av_compare_mod
     av_compare_ts
-    av_cpu_count
     av_crc
     av_crc_get_table
     av_crc_init
@@ -74,8 +69,6 @@ EXPORTS
     av_dict_set
     av_dirname
     av_div_q
-    av_downmix_info_update_side_data
-    av_dynarray2_add
     av_dynarray_add
     av_escape
     av_evaluate_lls
@@ -84,8 +77,6 @@ EXPORTS
     av_expr_parse
     av_expr_parse_and_eval
     av_ext2dbl
-    av_fast_malloc
-    av_fast_realloc
     av_fifo_alloc
     av_fifo_drain
     av_fifo_free
@@ -102,19 +93,15 @@ EXPORTS
     av_find_nearest_q_idx
     av_find_opt
     av_flt2int
-    av_fopen_utf8
     av_force_cpu_flags
     av_frame_alloc
     av_frame_clone
-    av_frame_copy
     av_frame_copy_props
     av_frame_free
     av_frame_get_best_effort_timestamp
     av_frame_get_buffer
     av_frame_get_channel_layout
     av_frame_get_channels
-    av_frame_get_color_range
-    av_frame_get_colorspace
     av_frame_get_decode_error_flags
     av_frame_get_metadata
     av_frame_get_pkt_duration
@@ -129,12 +116,9 @@ EXPORTS
     av_frame_move_ref
     av_frame_new_side_data
     av_frame_ref
-    av_frame_remove_side_data
     av_frame_set_best_effort_timestamp
     av_frame_set_channel_layout
     av_frame_set_channels
-    av_frame_set_color_range
-    av_frame_set_colorspace
     av_frame_set_decode_error_flags
     av_frame_set_metadata
     av_frame_set_pkt_duration
@@ -156,12 +140,10 @@ EXPORTS
     av_get_channel_layout_nb_channels
     av_get_channel_layout_string
     av_get_channel_name
-    av_get_colorspace_name
     av_get_cpu_flags
     av_get_default_channel_layout
     av_get_double
     av_get_int
-    av_get_known_color_name
     av_get_media_type_string
     av_get_packed_sample_fmt
     av_get_padded_bits_per_pixel
@@ -179,14 +161,6 @@ EXPORTS
     av_get_string
     av_get_token
     av_gettime
-    av_hash_alloc
-    av_hash_final
-    av_hash_freep
-    av_hash_get_name
-    av_hash_get_size
-    av_hash_init
-    av_hash_names
-    av_hash_update
     av_hmac_alloc
     av_hmac_calc
     av_hmac_final
@@ -207,7 +181,6 @@ EXPORTS
     av_init_lls
     av_int2dbl
     av_int2flt
-    av_int_list_length_for_size
     av_isdigit
     av_isgraph
     av_isspace
@@ -233,13 +206,7 @@ EXPORTS
     av_md5_sum
     av_md5_update
     av_memcpy_backptr
-    av_memdup
     av_mul_q
-    av_murmur3_alloc
-    av_murmur3_final
-    av_murmur3_init
-    av_murmur3_init_seeded
-    av_murmur3_update
     av_nearer_q
     av_next_option
     av_opt_child_class_next
@@ -256,7 +223,6 @@ EXPORTS
     av_opt_free
     av_opt_freep_ranges
     av_opt_get
-    av_opt_get_channel_layout
     av_opt_get_double
     av_opt_get_image_size
     av_opt_get_int
@@ -271,7 +237,6 @@ EXPORTS
     av_opt_query_ranges_default
     av_opt_set
     av_opt_set_bin
-    av_opt_set_channel_layout
     av_opt_set_defaults
     av_opt_set_defaults2
     av_opt_set_dict
@@ -297,15 +262,11 @@ EXPORTS
     av_pix_fmt_desc_next
     av_pix_fmt_descriptors DATA
     av_pix_fmt_get_chroma_sub_sample
-    av_pix_fmt_swap_endianness
     av_rc4_crypt
     av_rc4_init
     av_read_image_line
     av_realloc
-    av_realloc_array
     av_realloc_f
-    av_reallocp
-    av_reallocp_array
     av_reduce
     av_rescale
     av_rescale_delta
@@ -313,14 +274,8 @@ EXPORTS
     av_rescale_q_rnd
     av_rescale_rnd
     av_reverse DATA
-    av_ripemd_alloc
-    av_ripemd_final
-    av_ripemd_init
-    av_ripemd_size DATA
-    av_ripemd_update
     av_sample_fmt_is_planar
     av_samples_alloc
-    av_samples_alloc_array_and_samples
     av_samples_copy
     av_samples_fill_arrays
     av_samples_get_buffer_size
@@ -331,11 +286,6 @@ EXPORTS
     av_set_options_string
     av_set_q
     av_set_string3
-    av_sha512_alloc
-    av_sha512_final
-    av_sha512_init
-    av_sha512_size DATA
-    av_sha512_update
     av_sha_alloc
     av_sha_final
     av_sha_init
@@ -343,8 +293,6 @@ EXPORTS
     av_sha_update
     av_small_strptime
     av_solve_lls
-    av_stereo3d_alloc
-    av_stereo3d_create_side_data
     av_strcasecmp
     av_strdup
     av_strerror
@@ -377,8 +325,6 @@ EXPORTS
     av_tree_node_size DATA
     av_update_lls
     av_usleep
-    av_utf8_decode
-    av_vbprintf
     av_vlog
     av_write_image_line
     av_xtea_crypt
@@ -389,39 +335,28 @@ EXPORTS
     avpriv_float_dsp_init
     avpriv_frame_get_metadatap
     avpriv_init_lls
-    avpriv_init_lls2
-    avpriv_open
     avpriv_report_missing_feature
     avpriv_request_sample
     avpriv_scalarproduct_float_c
     avpriv_set_systematic_pal2
     avpriv_solve_lls
-    avpriv_solve_lls2
     avpriv_update_lls
     avpriv_vga16_font DATA
     avutil_configuration
     avutil_license
     avutil_version
-    ff_butterflies_float_sse DATA
-    ff_check_pixfmt_descriptors
     ff_cpu_cpuid DATA
+    ff_cpu_cpuid_test DATA
     ff_cpu_xgetbv DATA
-    ff_evaluate_lls_sse2 DATA
     ff_float_dsp_init_x86
-    ff_get_channel_layout
     ff_get_cpu_flags_x86
-    ff_init_lls_x86
     ff_log2_tab DATA
     ff_scalarproduct_float_sse DATA
-    ff_update_lls_avx DATA
-    ff_update_lls_sse2 DATA
     ff_vector_dmul_scalar_avx DATA
     ff_vector_dmul_scalar_sse2 DATA
     ff_vector_fmac_scalar_avx DATA
-    ff_vector_fmac_scalar_fma3 DATA
     ff_vector_fmac_scalar_sse DATA
     ff_vector_fmul_add_avx DATA
-    ff_vector_fmul_add_fma3 DATA
     ff_vector_fmul_add_sse DATA
     ff_vector_fmul_avx DATA
     ff_vector_fmul_reverse_avx DATA

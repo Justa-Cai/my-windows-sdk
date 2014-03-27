@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<!-- Created on March 26, 2014 by texi2html 1.82 -->
+<!-- Created on March 27, 2013 by texi2html 1.82 -->
 <!--
 texi2html was written by: 
             Lionel Cons <Lionel.Cons@cern.ch> (original author)
@@ -16,6 +16,8 @@ Send bugs and suggestions to <texi2html-bug@nongnu.org>
 
 <meta name="description" content="ffprobe Documentation: ">
 <meta name="keywords" content="FFmpeg documentation : ffprobe ">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.82">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="default.css" />
@@ -24,7 +26,6 @@ Send bugs and suggestions to <texi2html-bug@nongnu.org>
 </head>
 <body>
 <div id="container">
-<div id="body">
 
 <a name="SEC_Top"></a>
 <h1 class="settitle">ffprobe Documentation</h1>
@@ -94,44 +95,42 @@ name (which may be shared by other sections), and an unique
 name. See the output of &lsquo;<samp>sections</samp>&rsquo;.
 </p>
 <p>Metadata tags stored in the container or in the streams are recognized
-and printed in the corresponding &quot;FORMAT&quot;, &quot;STREAM&quot; or &quot;PROGRAM_STREAM&quot;
-section.
+and printed in the corresponding &quot;FORMAT&quot; or &quot;STREAM&quot; section.
 </p>
 
 <a name="Options"></a>
 <h1 class="chapter"><a href="ffprobe.html#toc-Options">3. Options</a></h1>
 
-<p>All the numerical options, if not specified otherwise, accept a string
-representing a number as input, which may be followed by one of the SI
-unit prefixes, for example: &rsquo;K&rsquo;, &rsquo;M&rsquo;, or &rsquo;G&rsquo;.
-</p>
-<p>If &rsquo;i&rsquo; is appended to the SI unit prefix, the complete prefix will be
-interpreted as a unit prefix for binary multiplies, which are based on
-powers of 1024 instead of powers of 1000. Appending &rsquo;B&rsquo; to the SI unit
-prefix multiplies the value by 8. This allows using, for example:
-&rsquo;KB&rsquo;, &rsquo;MiB&rsquo;, &rsquo;G&rsquo; and &rsquo;B&rsquo; as number suffixes.
+<p>All the numerical options, if not specified otherwise, accept in input
+a string representing a number, which may contain one of the
+SI unit prefixes, for example &rsquo;K&rsquo;, &rsquo;M&rsquo;, &rsquo;G&rsquo;.
+If &rsquo;i&rsquo; is appended after the prefix, binary prefixes are used,
+which are based on powers of 1024 instead of powers of 1000.
+The &rsquo;B&rsquo; postfix multiplies the value by 8, and can be
+appended after a unit prefix or used alone. This allows using for
+example &rsquo;KB&rsquo;, &rsquo;MiB&rsquo;, &rsquo;G&rsquo; and &rsquo;B&rsquo; as number postfix.
 </p>
 <p>Options which do not take arguments are boolean options, and set the
 corresponding value to true. They can be set to false by prefixing
-the option name with &quot;no&quot;. For example using &quot;-nofoo&quot;
-will set the boolean option with name &quot;foo&quot; to false.
+with &quot;no&quot; the option name, for example using &quot;-nofoo&quot; in the
+command line will set to false the boolean option with name &quot;foo&quot;.
 </p>
 <p><a name="Stream-specifiers"></a>
 </p><a name="Stream-specifiers-1"></a>
 <h2 class="section"><a href="ffprobe.html#toc-Stream-specifiers-1">3.1 Stream specifiers</a></h2>
 <p>Some options are applied per-stream, e.g. bitrate or codec. Stream specifiers
-are used to precisely specify which stream(s) a given option belongs to.
+are used to precisely specify which stream(s) does a given option belong to.
 </p>
 <p>A stream specifier is a string generally appended to the option name and
-separated from it by a colon. E.g. <code>-codec:a:1 ac3</code> contains the
-<code>a:1</code> stream specifier, which matches the second audio stream. Therefore, it
+separated from it by a colon. E.g. <code>-codec:a:1 ac3</code> option contains
+<code>a:1</code> stream specifier, which matches the second audio stream. Therefore it
 would select the ac3 codec for the second audio stream.
 </p>
-<p>A stream specifier can match several streams, so that the option is applied to all
+<p>A stream specifier can match several streams, the option is then applied to all
 of them. E.g. the stream specifier in <code>-b:a 128k</code> matches all audio
 streams.
 </p>
-<p>An empty stream specifier matches all streams. For example, <code>-codec copy</code>
+<p>An empty stream specifier matches all streams, for example <code>-codec copy</code>
 or <code>-codec: copy</code> would copy all the streams without reencoding.
 </p>
 <p>Possible forms of stream specifiers are:
@@ -141,18 +140,17 @@ or <code>-codec: copy</code> would copy all the streams without reencoding.
 thread count for the second stream to 4.
 </p></dd>
 <dt> &lsquo;<samp><var>stream_type</var>[:<var>stream_index</var>]</samp>&rsquo;</dt>
-<dd><p><var>stream_type</var> is one of following: &rsquo;v&rsquo; for video, &rsquo;a&rsquo; for audio, &rsquo;s&rsquo; for subtitle,
-&rsquo;d&rsquo; for data, and &rsquo;t&rsquo; for attachments. If <var>stream_index</var> is given, then it matches
-stream number <var>stream_index</var> of this type. Otherwise, it matches all
+<dd><p><var>stream_type</var> is one of: &rsquo;v&rsquo; for video, &rsquo;a&rsquo; for audio, &rsquo;s&rsquo; for subtitle,
+&rsquo;d&rsquo; for data and &rsquo;t&rsquo; for attachments. If <var>stream_index</var> is given, then
+matches stream number <var>stream_index</var> of this type. Otherwise matches all
 streams of this type.
 </p></dd>
 <dt> &lsquo;<samp>p:<var>program_id</var>[:<var>stream_index</var>]</samp>&rsquo;</dt>
-<dd><p>If <var>stream_index</var> is given, then it matches the stream with number <var>stream_index</var>
-in the program with the id <var>program_id</var>. Otherwise, it matches all streams in the
-program.
+<dd><p>If <var>stream_index</var> is given, then matches stream number <var>stream_index</var> in
+program with id <var>program_id</var>. Otherwise matches all streams in this program.
 </p></dd>
-<dt> &lsquo;<samp>#<var>stream_id</var> or i:<var>stream_id</var></samp>&rsquo;</dt>
-<dd><p>Match the stream by stream id (e.g. PID in MPEG-TS container).
+<dt> &lsquo;<samp>#<var>stream_id</var></samp>&rsquo;</dt>
+<dd><p>Matches the stream by format-specific ID.
 </p></dd>
 </dl>
 
@@ -168,20 +166,10 @@ program.
 </dd>
 <dt> &lsquo;<samp>-h, -?, -help, --help [<var>arg</var>]</samp>&rsquo;</dt>
 <dd><p>Show help. An optional parameter may be specified to print help about a specific
-item. If no argument is specified, only basic (non advanced) tool
-options are shown.
+item.
 </p>
 <p>Possible values of <var>arg</var> are:
 </p><dl compact="compact">
-<dt> &lsquo;<samp>long</samp>&rsquo;</dt>
-<dd><p>Print advanced tool options in addition to the basic tool options.
-</p>
-</dd>
-<dt> &lsquo;<samp>full</samp>&rsquo;</dt>
-<dd><p>Print complete list of options, including shared and private options
-for encoders, decoders, demuxers, muxers, filters, etc.
-</p>
-</dd>
 <dt> &lsquo;<samp>decoder=<var>decoder_name</var></samp>&rsquo;</dt>
 <dd><p>Print detailed information about the decoder named <var>decoder_name</var>. Use the
 &lsquo;<samp>-decoders</samp>&rsquo; option to get a list of all decoders.
@@ -202,10 +190,6 @@ for encoders, decoders, demuxers, muxers, filters, etc.
 &lsquo;<samp>-formats</samp>&rsquo; option to get a list of all muxers and demuxers.
 </p>
 </dd>
-<dt> &lsquo;<samp>filter=<var>filter_name</var></samp>&rsquo;</dt>
-<dd><p>Print detailed information about the filter name <var>filter_name</var>. Use the
-&lsquo;<samp>-filters</samp>&rsquo; option to get a list of all filters.
-</p></dd>
 </dl>
 
 </dd>
@@ -216,6 +200,16 @@ for encoders, decoders, demuxers, muxers, filters, etc.
 <dt> &lsquo;<samp>-formats</samp>&rsquo;</dt>
 <dd><p>Show available formats.
 </p>
+<p>The fields preceding the format names have the following meanings:
+</p><dl compact="compact">
+<dt> &lsquo;<samp>D</samp>&rsquo;</dt>
+<dd><p>Decoding available
+</p></dd>
+<dt> &lsquo;<samp>E</samp>&rsquo;</dt>
+<dd><p>Encoding available
+</p></dd>
+</dl>
+
 </dd>
 <dt> &lsquo;<samp>-codecs</samp>&rsquo;</dt>
 <dd><p>Show all codecs known to libavcodec.
@@ -256,48 +250,18 @@ for what is more correctly called a media bitstream format.
 <dd><p>Show channel names and standard channel layouts.
 </p>
 </dd>
-<dt> &lsquo;<samp>-colors</samp>&rsquo;</dt>
-<dd><p>Show recognized color names.
-</p>
-</dd>
-<dt> &lsquo;<samp>-loglevel [repeat+]<var>loglevel</var> | -v [repeat+]<var>loglevel</var></samp>&rsquo;</dt>
+<dt> &lsquo;<samp>-loglevel <var>loglevel</var> | -v <var>loglevel</var></samp>&rsquo;</dt>
 <dd><p>Set the logging level used by the library.
-Adding &quot;repeat+&quot; indicates that repeated log output should not be compressed
-to the first line and the &quot;Last message repeated n times&quot; line will be
-omitted. &quot;repeat&quot; can also be used alone.
-If &quot;repeat&quot; is used alone, and with no prior loglevel set, the default
-loglevel will be used. If multiple loglevel parameters are given, using
-&rsquo;repeat&rsquo; will not change the loglevel.
 <var>loglevel</var> is a number or a string containing one of the following values:
 </p><dl compact="compact">
 <dt> &lsquo;<samp>quiet</samp>&rsquo;</dt>
-<dd><p>Show nothing at all; be silent.
-</p></dd>
 <dt> &lsquo;<samp>panic</samp>&rsquo;</dt>
-<dd><p>Only show fatal errors which could lead the process to crash, such as
-and assert failure. This is not currently used for anything.
-</p></dd>
 <dt> &lsquo;<samp>fatal</samp>&rsquo;</dt>
-<dd><p>Only show fatal errors. These are errors after which the process absolutely
-cannot continue after.
-</p></dd>
 <dt> &lsquo;<samp>error</samp>&rsquo;</dt>
-<dd><p>Show all errors, including ones which can be recovered from.
-</p></dd>
 <dt> &lsquo;<samp>warning</samp>&rsquo;</dt>
-<dd><p>Show all warnings and errors. Any message related to possibly
-incorrect or unexpected events will be shown.
-</p></dd>
 <dt> &lsquo;<samp>info</samp>&rsquo;</dt>
-<dd><p>Show informative messages during processing. This is in addition to
-warnings and errors. This is the default value.
-</p></dd>
 <dt> &lsquo;<samp>verbose</samp>&rsquo;</dt>
-<dd><p>Same as <code>info</code>, except more verbose.
-</p></dd>
 <dt> &lsquo;<samp>debug</samp>&rsquo;</dt>
-<dd><p>Show everything, including debugging information.
-</p></dd>
 </dl>
 
 <p>By default the program logs to stderr, if coloring is supported by the
@@ -334,14 +298,6 @@ to a plain <code>%</code>
 appear in the report.
 </p>
 </dd>
-<dt> &lsquo;<samp>-hide_banner</samp>&rsquo;</dt>
-<dd><p>Suppress printing banner.
-</p>
-<p>All FFmpeg tools will normally show a copyright notice, build options
-and library versions. This option can be used to suppress printing
-this information.
-</p>
-</dd>
 <dt> &lsquo;<samp>-cpuflags flags (<em>global</em>)</samp>&rsquo;</dt>
 <dd><p>Allows setting and clearing cpu flags. This option is intended
 for testing. Do not use it unless you know what you&rsquo;re doing.
@@ -349,72 +305,8 @@ for testing. Do not use it unless you know what you&rsquo;re doing.
 ffmpeg -cpuflags mmx ...
 ffmpeg -cpuflags 0 ...
 </pre></td></tr></table>
-<p>Possible flags for this option are:
-</p><dl compact="compact">
-<dt> &lsquo;<samp>x86</samp>&rsquo;</dt>
-<dd><dl compact="compact">
-<dt> &lsquo;<samp>mmx</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>mmxext</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>sse</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>sse2</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>sse2slow</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>sse3</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>sse3slow</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>ssse3</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>atom</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>sse4.1</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>sse4.2</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>avx</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>xop</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>fma4</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>3dnow</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>3dnowext</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>cmov</samp>&rsquo;</dt>
-</dl>
-</dd>
-<dt> &lsquo;<samp>ARM</samp>&rsquo;</dt>
-<dd><dl compact="compact">
-<dt> &lsquo;<samp>armv5te</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>armv6</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>armv6t2</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>vfp</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>vfpv3</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>neon</samp>&rsquo;</dt>
-</dl>
-</dd>
-<dt> &lsquo;<samp>PowerPC</samp>&rsquo;</dt>
-<dd><dl compact="compact">
-<dt> &lsquo;<samp>altivec</samp>&rsquo;</dt>
-</dl>
-</dd>
-<dt> &lsquo;<samp>Specific Processors</samp>&rsquo;</dt>
-<dd><dl compact="compact">
-<dt> &lsquo;<samp>pentium2</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>pentium3</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>pentium4</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>k6</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>k62</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>athlon</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>athlonxp</samp>&rsquo;</dt>
-<dt> &lsquo;<samp>k8</samp>&rsquo;</dt>
-</dl>
-</dd>
-</dl>
 
 </dd>
-<dt> &lsquo;<samp>-opencl_bench</samp>&rsquo;</dt>
-<dd><p>Benchmark all available OpenCL devices and show the results. This option
-is only available when FFmpeg has been compiled with <code>--enable-opencl</code>.
-</p>
-</dd>
-<dt> &lsquo;<samp>-opencl_options options (<em>global</em>)</samp>&rsquo;</dt>
-<dd><p>Set OpenCL environment options. This option is only available when
-FFmpeg has been compiled with <code>--enable-opencl</code>.
-</p>
-<p><var>options</var> must be a list of <var>key</var>=<var>value</var> option pairs
-separated by &rsquo;:&rsquo;. See the &ldquo;OpenCL Options&rdquo; section in the
-ffmpeg-utils manual for the list of supported options.
-</p></dd>
 </dl>
 
 <a name="AVOptions"></a>
@@ -441,15 +333,14 @@ muxer:
 </p><table><tr><td>&nbsp;</td><td><pre class="example">ffmpeg -i input.flac -id3v2_version 3 out.mp3
 </pre></td></tr></table>
 
-<p>All codec AVOptions are per-stream, and thus a stream specifier
-should be attached to them.
+<p>All codec AVOptions are obviously per-stream, so the chapter on stream
+specifiers applies to them
 </p>
-<p>Note: the &lsquo;<samp>-nooption</samp>&rsquo; syntax cannot be used for boolean
-AVOptions, use &lsquo;<samp>-option 0</samp>&rsquo;/&lsquo;<samp>-option 1</samp>&rsquo;.
+<p>Note &lsquo;<samp>-nooption</samp>&rsquo; syntax cannot be used for boolean AVOptions,
+use &lsquo;<samp>-option 0</samp>&rsquo;/&lsquo;<samp>-option 1</samp>&rsquo;.
 </p>
-<p>Note: the old undocumented way of specifying per-stream AVOptions by
-prepending v/a/s to the options name is now obsolete and will be
-removed soon.
+<p>Note2 old undocumented way of specifying per-stream AVOptions by prepending
+v/a/s to the options name is now obsolete and will be removed soon.
 </p>
 <a name="Main-options"></a>
 <h2 class="section"><a href="ffprobe.html#toc-Main-options">3.4 Main options</a></h2>
@@ -516,7 +407,7 @@ option affects only the options related to streams
 
 </dd>
 <dt> &lsquo;<samp>-show_data</samp>&rsquo;</dt>
-<dd><p>Show payload data, as a hexadecimal and ASCII dump. Coupled with
+<dd><p>Show payload data, as an hexadecimal and ASCII dump. Coupled with
 &lsquo;<samp>-show_packets</samp>&rsquo;, it will dump the packets&rsquo; data. Coupled with
 &lsquo;<samp>-show_streams</samp>&rsquo;, it will dump the codec extradata.
 </p>
@@ -601,11 +492,11 @@ section with name &quot;PACKET&quot;.
 </p>
 </dd>
 <dt> &lsquo;<samp>-show_frames</samp>&rsquo;</dt>
-<dd><p>Show information about each frame and subtitle contained in the input
-multimedia stream.
+<dd><p>Show information about each frame contained in the input multimedia
+stream.
 </p>
 <p>The information for each single frame is printed within a dedicated
-section with name &quot;FRAME&quot; or &quot;SUBTITLE&quot;.
+section with name &quot;FRAME&quot;.
 </p>
 </dd>
 <dt> &lsquo;<samp>-show_streams</samp>&rsquo;</dt>
@@ -614,20 +505,6 @@ multimedia stream.
 </p>
 <p>Each media stream information is printed within a dedicated section
 with name &quot;STREAM&quot;.
-</p>
-</dd>
-<dt> &lsquo;<samp>-show_programs</samp>&rsquo;</dt>
-<dd><p>Show information about programs and their streams contained in the input
-multimedia stream.
-</p>
-<p>Each media stream information is printed within a dedicated section
-with name &quot;PROGRAM_STREAM&quot;.
-</p>
-</dd>
-<dt> &lsquo;<samp>-show_chapters</samp>&rsquo;</dt>
-<dd><p>Show information about chapters stored in the format.
-</p>
-<p>Each chapter is printed within a dedicated section with name &quot;CHAPTER&quot;.
 </p>
 </dd>
 <dt> &lsquo;<samp>-count_frames</samp>&rsquo;</dt>
@@ -639,66 +516,6 @@ corresponding stream section.
 <dd><p>Count the number of packets per stream and report it in the
 corresponding stream section.
 </p>
-</dd>
-<dt> &lsquo;<samp>-read_intervals <var>read_intervals</var></samp>&rsquo;</dt>
-<dd>
-<p>Read only the specified intervals. <var>read_intervals</var> must be a
-sequence of interval specifications separated by &quot;,&quot;.
-<code>ffprobe</code> will seek to the interval starting point, and will
-continue reading from that.
-</p>
-<p>Each interval is specified by two optional parts, separated by &quot;%&quot;.
-</p>
-<p>The first part specifies the interval start position. It is
-interpreted as an abolute position, or as a relative offset from the
-current position if it is preceded by the &quot;+&quot; character. If this first
-part is not specified, no seeking will be performed when reading this
-interval.
-</p>
-<p>The second part specifies the interval end position. It is interpreted
-as an absolute position, or as a relative offset from the current
-position if it is preceded by the &quot;+&quot; character. If the offset
-specification starts with &quot;#&quot;, it is interpreted as the number of
-packets to read (not including the flushing packets) from the interval
-start. If no second part is specified, the program will read until the
-end of the input.
-</p>
-<p>Note that seeking is not accurate, thus the actual interval start
-point may be different from the specified position. Also, when an
-interval duration is specified, the absolute end time will be computed
-by adding the duration to the interval start point found by seeking
-the file, rather than to the specified start value.
-</p>
-<p>The formal syntax is given by:
-</p><table><tr><td>&nbsp;</td><td><pre class="example"><var>INTERVAL</var>  ::= [<var>START</var>|+<var>START_OFFSET</var>][%[<var>END</var>|+<var>END_OFFSET</var>]]
-<var>INTERVALS</var> ::= <var>INTERVAL</var>[,<var>INTERVALS</var>]
-</pre></td></tr></table>
-
-<p>A few examples follow.
-</p><ul>
-<li>
-Seek to time 10, read packets until 20 seconds after the found seek
-point, then seek to position <code>01:30</code> (1 minute and thirty
-seconds) and read packets until position <code>01:45</code>.
-<table><tr><td>&nbsp;</td><td><pre class="example">10%+20,01:30%01:45
-</pre></td></tr></table>
-
-</li><li>
-Read only 42 packets after seeking to position <code>01:23</code>:
-<table><tr><td>&nbsp;</td><td><pre class="example">01:23%+#42
-</pre></td></tr></table>
-
-</li><li>
-Read only the first 20 seconds from the start:
-<table><tr><td>&nbsp;</td><td><pre class="example">%+20
-</pre></td></tr></table>
-
-</li><li>
-Read from the start until position <code>02:30</code>:
-<table><tr><td>&nbsp;</td><td><pre class="example">%02:30
-</pre></td></tr></table>
-</li></ul>
-
 </dd>
 <dt> &lsquo;<samp>-show_private_data, -private</samp>&rsquo;</dt>
 <dd><p>Show private data, that is data depending on the format of the
@@ -748,44 +565,6 @@ used for printing all the parts of the output.
 to adopt. The options are specified as a list of <var>key</var>=<var>value</var>
 pairs, separated by &quot;:&quot;.
 </p>
-<p>All writers support the following options:
-</p>
-<dl compact="compact">
-<dt> &lsquo;<samp>string_validation, sv</samp>&rsquo;</dt>
-<dd><p>Set string validation mode.
-</p>
-<p>The following values are accepted.
-</p><dl compact="compact">
-<dt> &lsquo;<samp>fail</samp>&rsquo;</dt>
-<dd><p>The writer will fail immediately in case an invalid string (UTF-8)
-sequence or code point is found in the input. This is especially
-useful to validate input metadata.
-</p>
-</dd>
-<dt> &lsquo;<samp>ignore</samp>&rsquo;</dt>
-<dd><p>Any validation error will be ignored. This will result in possibly
-broken output, especially with the json or xml writer.
-</p>
-</dd>
-<dt> &lsquo;<samp>replace</samp>&rsquo;</dt>
-<dd><p>The writer will substitute invalid UTF-8 sequences or code points with
-the string specified with the &lsquo;<samp>string_validation_replacement</samp>&rsquo;.
-</p></dd>
-</dl>
-
-<p>Default value is &lsquo;<samp>replace</samp>&rsquo;.
-</p>
-</dd>
-<dt> &lsquo;<samp>string_validation_replacement, svr</samp>&rsquo;</dt>
-<dd><p>Set replacement string to use in case &lsquo;<samp>string_validation</samp>&rsquo; is
-set to &lsquo;<samp>replace</samp>&rsquo;.
-</p>
-<p>In case the option is not specified, the writer will assume the empty
-string, that is it will remove the invalid sequences from the input
-strings.
-</p></dd>
-</dl>
-
 <p>A description of the currently available writers follows.
 </p>
 <a name="default"></a>
@@ -800,8 +579,8 @@ keyN=valN
 [/SECTION]
 </pre></td></tr></table>
 
-<p>Metadata tags are printed as a line in the corresponding FORMAT, STREAM or
-PROGRAM_STREAM section, and are prefixed by the string &quot;TAG:&quot;.
+<p>Metadata tags are printed as a line in the corresponding FORMAT or
+STREAM section, and are prefixed by the string &quot;TAG:&quot;.
 </p>
 <p>A description of the accepted options follows.
 </p>
@@ -1025,12 +804,10 @@ DV, GXF and AVI timecodes are available in format metadata
 
 </li></ul>
 
-
 <a name="See-Also"></a>
 <h1 class="chapter"><a href="ffprobe.html#toc-See-Also">6. See Also</a></h1>
 
-<p><a href="ffprobe-all.html">ffprobe-all</a>,
-<a href="ffmpeg.html">ffmpeg</a>, <a href="ffplay.html">ffplay</a>, <a href="ffserver.html">ffserver</a>,
+<p><a href="ffplay.html">ffmpeg</a>, <a href="ffprobe.html">ffprobe</a>, <a href="ffserver.html">ffserver</a>,
 <a href="ffmpeg-utils.html">ffmpeg-utils</a>,
 <a href="ffmpeg-scaler.html">ffmpeg-scaler</a>,
 <a href="ffmpeg-resampler.html">ffmpeg-resampler</a>,
@@ -1057,4 +834,4 @@ online repository at <a href="http://source.ffmpeg.org">http://source.ffmpeg.org
 </p>
 
 <footer class="footer pagination-right">
-<span class="label label-info">This document was generated by <em>Kyle Schwarz</em> on <em>March 26, 2014</em> using <a href="http://www.nongnu.org/texi2html/"><em>texi2html 1.82</em></a>.</span></footer></div></div></body>
+<span class="label label-info">This document was generated by <em>Kyle Schwarz</em> on <em>March 27, 2013</em> using <a href="http://www.nongnu.org/texi2html/"><em>texi2html 1.82</em></a>.</span></footer></div>
